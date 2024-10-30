@@ -76,7 +76,6 @@ namespace WebXeDapAPI.Controller
         }
 
         [HttpPut("Update")]
-        [Authorize]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public IActionResult UpdateBrand(BrandDto brandDto)

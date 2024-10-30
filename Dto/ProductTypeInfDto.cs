@@ -12,6 +12,5 @@ namespace WebXeDapAPI.Dto
         public string Image { get; set; }
         public string TypeName { get; set; }
         public string Colors { get; set; }
-
     }
 }

@@ -63,7 +63,7 @@ namespace WebXeDapAPI.Controller
             }
         }
 
-        [HttpPut("Update")]
+        [HttpPut("Update/{Id}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> UpdateProduct(int Id, [FromForm] UpdateProductDto updateproductDto)
@@ -246,14 +246,13 @@ namespace WebXeDapAPI.Controller
         }
 
         [HttpGet("GetAllProduct")]
-        //[Authorize]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public IActionResult GetAllProduct()
         {
             try
             {
-                var products = _productsInterface.GetAllProducts();
+                var products = _productsService.GetAllProduct();
                 return Ok(new XBaseResult
                 {
                     data = products,

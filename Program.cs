@@ -115,10 +115,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigins", builder =>
     {
-        builder.WithOrigins("http://localhost:4200")
+        builder.AllowAnyOrigin() // Cho phép tất cả miền
             .AllowAnyHeader()
-            .WithMethods("POST", "PUT", "GET", "DELETE", "OPTIONS")
-            .AllowCredentials();
+            .WithMethods("POST", "PUT", "GET", "DELETE", "OPTIONS");
     });
 });
 

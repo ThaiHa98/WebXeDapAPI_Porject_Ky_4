@@ -1,4 +1,7 @@
-﻿namespace WebXeDapAPI.Dto
+﻿using Microsoft.AspNetCore.Http;
+using WebXeDapAPI.Models.Enum;
+
+namespace WebXeDapAPI.Dto
 {
     public class ProductGetAllInfDto
     {
@@ -6,6 +9,10 @@
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public decimal PriceHasDecreased { get; set; }//giá đã giảm
-        public string Image { get; set; }
+        public string Description { get; set; }
+        public int Quantity { get; set; }
+        public IFormFile? Image { get; set; }
+        public DateTime? Create { get; set; }
+        public String Status { get; set; }
     }
 }
