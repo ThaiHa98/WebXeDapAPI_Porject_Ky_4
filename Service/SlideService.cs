@@ -39,6 +39,7 @@ namespace WebXeDapAPI.Service
                     Name = slideDto.Name,
                     Url = slideDto.Url,
                     Description = slideDto.Description,
+                    PriceHasDecreased = slideDto.PriceHasDecreased,
                     Image = imagePath,
                     Sort = slideDto.Sort,
                 };
@@ -50,6 +51,7 @@ namespace WebXeDapAPI.Service
                     Name = slide.Name,
                     Url = slide.Url,
                     Description = slide.Description,
+                    PriceHasDecreased = slide.PriceHasDecreased,
                     Sort = slide.Sort
                 };
 
